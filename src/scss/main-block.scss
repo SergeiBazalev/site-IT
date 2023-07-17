@@ -1,0 +1,251 @@
+.main-block {
+   width: 100%;
+   max-height: 325px;
+   background-color: $blue-500;
+   color: $white;
+   overflow: hidden;
+   &__container {
+      padding: 15px 20px 0;
+   }
+
+   &__square {
+      position: relative;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+      max-width: 814px;
+      margin: 0 auto;
+      border: 2px solid $white;
+      border-radius: 28px;
+      padding: 14px 13px 300px;
+   }
+
+   &__content {
+      max-width: 598px;
+      
+   }
+
+   &__title {
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 31px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      margin-bottom: 22px;
+      padding: 0 10px;
+   }
+
+   &__btn {
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      background-color: $white; 
+      padding: 10px 60px; 
+      border-radius: 36px; 
+      text-align: center;
+      border: none; 
+      font-size: 14px;
+      font-weight: 700;
+      color: $blue-900;
+
+      &:hover {
+         background-color: $blue-300;
+         color: $white; 
+      }
+      &:active {
+         background-color: $white; 
+         color: $blue-900; 
+      }
+   }
+
+   &__phone {
+      position: absolute;
+      top: 130px;
+      left: -105px;
+      z-index: 1;
+      box-sizing: border-box;
+      width: 130px;
+      height: 223px;
+      background-color: $blue-500;
+      border: 2px solid $white;
+      border-radius: 10px;
+   }
+
+   &__tablet {
+      position: absolute;
+      top: 295px;
+      right: -170px;
+      z-index: 1;
+      box-sizing: border-box;
+      width: 325px;
+      height: 139px;
+      background-color: $blue-500;
+      border: 2px solid $white;
+      border-radius: 10px;
+   }
+
+   &__card-big,
+   &__card-small_top,
+   &__card-small_bottom{
+      display: none;
+   }
+}
+
+@media (min-width: 768px) {
+
+   .main-block {
+      max-height: 535px;
+
+      &__container{
+         padding: 15px 54px 0;
+         
+      }
+      &__square {
+         border-radius: 69px;
+         border: 3px solid $white;
+         padding: 57px 20px 300px 20px;
+      }
+      &__title {
+         line-height: 49px;
+         font-size: 36px;
+         padding: 0 30px;
+      }
+      &__text {
+         width: 400px;
+         margin: 0 auto;
+         text-align: center;
+         margin-bottom: 60px;
+         padding: 0 10px;
+      }
+
+      &__phone {
+         top: 234px;
+         left: -96px;
+         width: 193px;
+         height: 331px;
+         border-radius: 34px;
+      }
+
+      &__tablet {
+         top: 448px;
+         right: -296px;
+         width: 557px;
+         height: 182px;
+         border-radius: 34px;
+      }
+      &__card-big,
+      &__card-small_top,
+      &__card-small_bottom{
+         display: block;
+         position: absolute;
+         z-index: 3;
+      }
+      &__card-big {
+         img{
+            width: 178px;
+            height: 108px;
+         }
+         top: 380px;
+         left: -17px;
+      }
+
+      &__card-small_top,
+      &__card-small_bottom{
+         img{
+            width: 167px;
+            height: 64px;
+         }
+         right: -28px;
+      }
+      &__card-small_top {
+         top: 278px;
+      }
+      &__card-small_bottom {
+         top: 356px;
+      }
+   }
+
+}
+
+@media (min-width: 1166px) {
+
+   .main-block {
+      max-height: 398px;
+
+      &__container{
+         padding: 4px 54px 0;
+      }
+
+      &__btn {
+         font-size: 18px;
+         line-height: 25px;
+      }
+
+      &__square {
+         padding: 46px 20px 300px 20px;
+      }
+
+      &__title {
+         font-size: 36px;
+         line-height: 49px;
+         margin-bottom: 16px;
+      }
+
+      &__text {
+         width: 500px;
+         margin-bottom: 50px;
+      }
+
+      &__phone,
+      &__tablet {
+         border: 3px solid $white;
+         border-radius: 42px; 
+      }
+
+      &__phone {
+         top: 114px;
+         left: -96px;
+      }
+
+      &__tablet {
+         top: 330px;
+         right: -176px;
+         width: 352px;
+         height: 150px;
+      }
+      &__card-big {
+         img{
+            width: auto;
+            height: auto;
+         }
+         position: absolute;
+         z-index: 3;
+         top: 195px;
+         left: -176px;
+      }
+
+      &__card-small_top,
+      &__card-small_bottom{
+         img{
+            width: auto;
+            height: auto;
+         }
+         position: absolute;
+         z-index: 3;
+         right: -176px;
+      }
+      &__card-small_top {
+         top: 63px;
+      }
+      &__card-small_bottom {
+         top: 186px;
+
+      }
+   }
+
+}

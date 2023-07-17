@@ -1,0 +1,37 @@
+.footer {
+   width: 100%;
+   background-color: $blue-500;
+   color: $white;
+
+   &__container {
+      padding: 20px 20px 30px;
+   }
+
+   &__body {
+      margin: 50px 0;
+
+      p:not(:last-child){
+         margin-bottom: 25px;
+      }
+
+      p a {
+         color: $white;
+      }
+   }
+   &__email,
+   &__phone,
+   &__copyright {
+         font-weight: 600;
+      }
+}
+@media (min-width: 768px) {
+   .footer__container {
+      padding: 20px 40px 30px;
+   }
+}
+
+@media (min-width: 1160px) {
+   .footer__container {
+      padding: 40px 20px 58px 20px;
+   }
+}
